@@ -179,6 +179,7 @@
 
         .cell.state-X {
             color: var(--cross-color);
+            background-color: transparent;
         }
 
         .cell.state-V {
@@ -216,7 +217,7 @@
         <h2>Dossier-aanwijzingen</h2>
         <ul class="clues-list">
             <li>De rechercheur die de <strong>Bankroof</strong> oploste, werkt <em>niet</em> in Amsterdam of Utrecht.</li>
-            <li>De <strong>Cyberaanval</strong> werd begaan in een stad die alfabetisch gezien direct ná de stad van de Kunstroof komt. Het doorslaggevende bewijs hier was een <strong>IP-adres</strong>.</li>
+            <li>De <strong>Cyberaanval</strong> werd gepleegd in een stad die alfabetisch gezien direct ná de stad van de Kunstroof komt. Het doorslaggevende bewijs hier was een <strong>IP-adres</strong>.</li>
             <li>Rechercheur <strong>Ronson</strong> loste een grote zaak op in <strong>Utrecht</strong>, maar dat was <em>niet</em> de Moordzaak en er kwam <em>geen</em> DNA-profiel aan te pas.</li>
             <li>Het <strong>Bloedspoor</strong> werd als sluitend bewijs veiliggesteld in <strong>Den Haag</strong>.</li>
             <li>Rechercheur <strong>Schippers</strong> loste de <strong>Kunstroof</strong> op, maar deed dat <em>niet</em> in Utrecht.</li>
@@ -289,4 +290,18 @@
                         <td class="cell block-boundary" data-row="Ronson" data-col="Moordzaak" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
                         <td class="cell" data-row="Ronson" data-col="Bloedspoor" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
                         <td class="cell" data-row="Ronson" data-col="DNA-profiel" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row
+                        <td class="cell" data-row="Ronson" data-col="IP-adres" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Ronson" data-col="Vingerafdruk" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                    </tr>
+                    <tr class="block-boundary">
+                        <td class="row-header">Schippers</td>
+                        <td class="cell" data-row="Schippers" data-col="Amsterdam" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Schippers" data-col="DenHaag" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Schippers" data-col="Rotterdam" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell block-boundary" data-row="Schippers" data-col="Utrecht" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Schippers" data-col="Bankroof" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Schippers" data-col="Cyberaanval" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Schippers" data-col="Kunstroof" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell block-boundary" data-row="Schippers" data-col="Moordzaak" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Schippers" data-col="Bloedspoor" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Schi
