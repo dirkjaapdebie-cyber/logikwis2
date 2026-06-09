@@ -67,7 +67,7 @@
             padding-bottom: 8px;
         }
 
-        .instructions-list, .clues-list {
+        .clues-list {
             margin: 0;
             padding-left: 20px;
             line-height: 1.6;
@@ -127,7 +127,6 @@
             position: relative;
         }
 
-        /* Dikke randen voor de 4x4 blokken */
         tr.block-boundary th, tr.block-boundary td {
             border-bottom: 3px solid #2d3748;
         }
@@ -208,7 +207,7 @@
 <body>
 
 <div class="container">
-    <h1>Cold Case Cold Case: Het Politiedossier</h1>
+    <h1>Cold Case: Het Politiedossier</h1>
     <div class="subtitle">Moeilijkheidsgraad: ★★★★☆ (Expert / 4x4 Matrix)</div>
     
     <div id="winMessage">🚨 Zaak Opgelost! Het dossier is compleet en alle bewijsvoering is sluitend. Uitstekend recherchewerk! 🕵️‍♂️💼</div>
@@ -219,9 +218,9 @@
             <li>De rechercheur die de <strong>Bankroof</strong> oploste, werkt <em>niet</em> in Amsterdam of Utrecht.</li>
             <li>De <strong>Cyberaanval</strong> werd begaan in een stad die alfabetisch gezien direct ná de stad van de Kunstroof komt. Het doorslaggevende bewijs hier was een <strong>IP-adres</strong>.</li>
             <li>Rechercheur <strong>Ronson</strong> loste een grote zaak op in <strong>Utrecht</strong>, maar dat was <em>niet</em> de Moordzaak en er kwam <em>geen</em> DNA-profiel aan te pas.</li>
-            <li>Het <strong>Bloedspoor</strong> werd als sluitend bewijs veiliggesteld in <strong>Rotterdam</strong>.</li>
-            <li>Rechercheur <strong>Schippers</strong> loste de <strong>Kunstroof</strong> op, maar deed dat <em>niet</em> in Den Haag.</li>
-            <li>De misdaad in <strong>Amsterdam</strong> werd opgelost door middel van een <strong>Vingerafdruk</strong>.</li>
+            <li>Het <strong>Bloedspoor</strong> werd als sluitend bewijs veiliggesteld in <strong>Den Haag</strong>.</li>
+            <li>Rechercheur <strong>Schippers</strong> loste de <strong>Kunstroof</strong> op, maar deed dat <em>niet</em> in Utrecht.</li>
+            <li>De misdaad in <strong>Amsterdam</strong> werd opgelost door middel van een <strong>IP-adres</strong>.</li>
             <li>Rechercheur <strong>De Vries</strong> vond een cruciaal <strong>DNA-profiel</strong>, maar zijn zaak speelde zich <em>niet</em> af in Den Haag.</li>
         </ul>
     </div>
@@ -250,213 +249,44 @@
                 <tbody>
                     <tr>
                         <td class="row-header">De Vries</td>
-                        <td class="cell" data-row="DeVries" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="DeVries" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="Bankroof" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="Cyberaanval" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="Kunstroof" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="DeVries" data-col="Moordzaak" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="Bloedspoor" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="DNA-profiel" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="IP-adres" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DeVries" data-col="Vingerafdruk" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="Amsterdam" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="DenHaag" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="Rotterdam" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell block-boundary" data-row="DeVries" data-col="Utrecht" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="Bankroof" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="Cyberaanval" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="Kunstroof" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell block-boundary" data-row="DeVries" data-col="Moordzaak" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="Bloedspoor" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="DNA-profiel" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="IP-adres" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="DeVries" data-col="Vingerafdruk" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
                     </tr>
                     <tr>
                         <td class="row-header">Edison</td>
-                        <td class="cell" data-row="Edison" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Edison" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="Bankroof" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="Cyberaanval" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="Kunstroof" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Edison" data-col="Moordzaak" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="Bloedspoor" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="DNA-profiel" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="IP-adres" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Edison" data-col="Vingerafdruk" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="Amsterdam" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="DenHaag" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="Rotterdam" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell block-boundary" data-row="Edison" data-col="Utrecht" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="Bankroof" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="Cyberaanval" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="Kunstroof" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell block-boundary" data-row="Edison" data-col="Moordzaak" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="Bloedspoor" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="DNA-profiel" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="IP-adres" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Edison" data-col="Vingerafdruk" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
                     </tr>
                     <tr>
                         <td class="row-header">Ronson</td>
-                        <td class="cell" data-row="Ronson" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Ronson" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="Bankroof" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="Cyberaanval" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="Kunstroof" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Ronson" data-col="Moordzaak" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="Bloedspoor" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="DNA-profiel" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="IP-adres" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Ronson" data-col="Vingerafdruk" onclick="cycleState(this)"></td>
-                    </tr>
-                    <tr class="block-boundary">
-                        <td class="row-header">Schippers</td>
-                        <td class="cell" data-row="Schippers" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Schippers" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="Bankroof" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="Cyberaanval" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="Kunstroof" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Schippers" data-col="Moordzaak" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="Bloedspoor" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="DNA-profiel" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="IP-adres" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Schippers" data-col="Vingerafdruk" onclick="cycleState(this)"></td>
-                    </tr>
-
-                    <tr>
-                        <td class="row-header">Bloedspoor</td>
-                        <td class="cell" data-row="Bloedspoor" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Bloedspoor" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Bloedspoor" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Bloedspoor" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Bloedspoor" data-col="Bankroof" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Bloedspoor" data-col="Cyberaanval" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Bloedspoor" data-col="Kunstroof" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Bloedspoor" data-col="Moordzaak" onclick="cycleState(this)"></td>
-                        <td colspan="4" style="background:#cbd5e0; border:none; cursor:default;"></td>
-                    </tr>
-                    <tr>
-                        <td class="row-header">DNA-profiel</td>
-                        <td class="cell" data-row="DNA-profiel" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DNA-profiel" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DNA-profiel" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="DNA-profiel" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DNA-profiel" data-col="Bankroof" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DNA-profiel" data-col="Cyberaanval" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="DNA-profiel" data-col="Kunstroof" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="DNA-profiel" data-col="Moordzaak" onclick="cycleState(this)"></td>
-                        <td colspan="4" style="background:#cbd5e0; border:none; cursor:default;"></td>
-                    </tr>
-                    <tr>
-                        <td class="row-header">IP-adres</td>
-                        <td class="cell" data-row="IP-adres" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="IP-adres" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="IP-adres" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="IP-adres" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="IP-adres" data-col="Bankroof" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="IP-adres" data-col="Cyberaanval" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="IP-adres" data-col="Kunstroof" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="IP-adres" data-col="Moordzaak" onclick="cycleState(this)"></td>
-                        <td colspan="4" style="background:#cbd5e0; border:none; cursor:default;"></td>
-                    </tr>
-                    <tr class="block-boundary">
-                        <td class="row-header">Vingerafdruk</td>
-                        <td class="cell" data-row="Vingerafdruk" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Vingerafdruk" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Vingerafdruk" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Vingerafdruk" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Vingerafdruk" data-col="Bankroof" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Vingerafdruk" data-col="Cyberaanval" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Vingerafdruk" data-col="Kunstroof" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Vingerafdruk" data-col="Moordzaak" onclick="cycleState(this)"></td>
-                        <td colspan="4" style="background:#cbd5e0; border:none; cursor:default;"></td>
-                    </tr>
-
-                    <tr>
-                        <td class="row-header">Bankroof</td>
-                        <td class="cell" data-row="Bankroof" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Bankroof" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Bankroof" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Bankroof" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td colspan="8" style="background:#cbd5e0; border:none; cursor:default;"></td>
-                    </tr>
-                    <tr>
-                        <td class="row-header">Cyberaanval</td>
-                        <td class="cell" data-row="Cyberaanval" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Cyberaanval" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Cyberaanval" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Cyberaanval" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td colspan="8" style="background:#cbd5e0; border:none; cursor:default;"></td>
-                    </tr>
-                    <tr>
-                        <td class="row-header">Kunstroof</td>
-                        <td class="cell" data-row="Kunstroof" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Kunstroof" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Kunstroof" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Kunstroof" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td colspan="8" style="background:#cbd5e0; border:none; cursor:default;"></td>
-                    </tr>
-                    <tr class="block-boundary">
-                        <td class="row-header">Moordzaak</td>
-                        <td class="cell" data-row="Moordzaak" data-col="Amsterdam" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Moordzaak" data-col="DenHaag" onclick="cycleState(this)"></td>
-                        <td class="cell" data-row="Moordzaak" data-col="Rotterdam" onclick="cycleState(this)"></td>
-                        <td class="cell block-boundary" data-row="Moordzaak" data-col="Utrecht" onclick="cycleState(this)"></td>
-                        <td colspan="8" style="background:#cbd5e0; border:none; cursor:default;"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <button class="btn-reset" onclick="resetGrid()">Wis dossier / Start opnieuw</button>
-    </div>
-</div>
-
-<script>
-    // De 24 unieke juiste combinaties voor de 4x4-matrix oplossingsstructuur
-    const correctCombinations = [
-        // Rechercheurs -> Steden
-        {row: "DeVries", col: "Rotterdam"}, {row: "Edison", col: "Amsterdam"},
-        {row: "Ronson", col: "Utrecht"}, {row: "Schippers", col: "DenHaag"},
-        // Rechercheurs -> Misdaden
-        {row: "DeVries", col: "Moordzaak"}, {row: "Edison", col: "Cyberaanval"},
-        {row: "Ronson", col: "Bankroof"}, {row: "Schippers", col: "Kunstroof"},
-        // Rechercheurs -> Bewijsstukken
-        {row: "DeVries", col: "DNA-profiel"}, {row: "Edison", col: "IP-adres"},
-        {row: "Ronson", col: "Vingerafdruk"}, {row: "Schippers", col: "Bloedspoor"},
-        // Bewijsstukken -> Steden
-        {row: "Bloedspoor", col: "DenHaag"}, {row: "DNA-profiel", col: "Rotterdam"},
-        {row: "IP-adres", col: "Amsterdam"}, {row: "Vingerafdruk", col: "Utrecht"},
-        // Bewijsstukken -> Misdaden
-        {row: "Bloedspoor", col: "Kunstroof"}, {row: "DNA-profiel", col: "Moordzaak"},
-        {row: "IP-adres", col: "Cyberaanval"}, {row: "Vingerafdruk", col: "Bankroof"},
-        // Misdaden -> Steden
-        {row: "Bankroof", col: "Utrecht"}, {row: "Cyberaanval", col: "Amsterdam"},
-        {row: "Kunstroof", col: "DenHaag"}, {row: "Moordzaak", col: "Rotterdam"}
-    ];
-
-    function cycleState(cell) {
-        const table = document.getElementById('logicGrid');
-        const rowIndex = cell.parentElement.rowIndex;
-        const colIndex = cell.cellIndex;
-
-        if (!cell.classList.contains('state-X') && !cell.classList.contains('state-V')) {
-            cell.classList.add('state-X');
-            cell.innerText = 'X';
-        } else if (cell.classList.contains('state-X')) {
-            cell.classList.remove('state-X');
-            cell.classList.add('state-V');
-            cell.innerText = '✓';
-            autoCross4x4(table, rowIndex, colIndex, cell);
-            checkSolution();
-        } else {
-            cell.classList.remove('state-V');
-            cell.innerText = '';
-            document.getElementById('winMessage').style.display = 'none';
-        }
-    }
-
-    function autoCross4x4(table, rIdx, cIdx, activeCell) {
-        // Dynamische 4x4 blokgrenzen bepalen op basis van de kolommen (1-4, 5-8, 9-12)
-        let startCol, endCol;
-        if (cIdx <= 4) { startCol = 1; endCol = 4; }
-        else if (cIdx <= 8) { startCol = 5; endCol = 8; }
-        else { startCol = 9; endCol = 12; }
-
-        // Dynamische 4x4 blokgrenzen bepalen op basis van de rijen (1-4, 5-8, 9-12)
-        let startRow, endRow;
-        if (rIdx <= 4) { startRow = 1; endRow = 4; }
-        else if (rIdx <= 8) { startRow = 5; endRow = 8; }
-        else { startRow = 9; endRow = 12; }
-
-        // Rij doorstrepen in het actieve subgrid
-        const currentRow = table.rows[rIdx];
-        for (let c = startCol; c <= endCol; c++) {
-            let targetCell = currentRow.cells[c];
-            if (targetCell && targetCell !== activeCell && targetCell.classList.contains('cell') && !targetCell.classList
+                        <td class="cell" data-row="Ronson" data-col="Amsterdam" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Ronson" data-col="DenHaag" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Ronson" data-col="Rotterdam" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell block-boundary" data-row="Ronson" data-col="Utrecht" data-rowgroup="rechercheurs" data-colgroup="steden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Ronson" data-col="Bankroof" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Ronson" data-col="Cyberaanval" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Ronson" data-col="Kunstroof" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell block-boundary" data-row="Ronson" data-col="Moordzaak" data-rowgroup="rechercheurs" data-colgroup="misdaden" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Ronson" data-col="Bloedspoor" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row="Ronson" data-col="DNA-profiel" data-rowgroup="rechercheurs" data-colgroup="bewijs" onclick="cycleState(this)"></td>
+                        <td class="cell" data-row
